@@ -1,4 +1,4 @@
-# Common Windows Event Codes
+# Windows Event Codes
 
 ## Security Audit Log Cleared (Event Code: 1102)
 When the audit log is cleared from Windows Event Viewer, the system will generate the event code 1102. It is an event that is typically never seen under normal circumstances. Monitoring and alerting for event code 1102 can be critical in detecting a possible security breach, aid in determining the timeline of an attack, and ensure that host machine logs are not being tampered with. 
@@ -24,5 +24,5 @@ When there is an attempt to reset or change an account password, the system will
 
 We can search in Splunk with the following query:  
 `
-index="main" host="DESKTOP-KV7CQ1M" source="WinEventLog:Security" (EventCode="4723" OR EventCode="4724")"
+index="main" host="DESKTOP-ABC123" source="WinEventLog:Security" (EventCode="4723" OR EventCode="4724")"
 `
