@@ -22,6 +22,7 @@ index="main" host="DESKTOP-ABC123" source="WinEventLog:Security" EventCode="4720
 ## Attempt to Reset/Change Account Password (Event Code: 4723, 4724)
 When there is an attempt to reset or change an account password, the system will generate the event codes 4723 and 4724 respectively. While resetting and/or changing passwords may be a common and legitimate action, it can also be a possible indicator of a security beach if the actions are attempted by unauthorized individuals. Attackers may attempt to reset/change account passwords to gain unauthorized access, escalate their privlege, maintain persistence, obfiscate log activity, and conduct ransom attacks.
 
+
 We can search in Splunk with the following query:  
 `
 index="main" host="DESKTOP-ABC123" source="WinEventLog:Security" (EventCode="4723" OR EventCode="4724")"
